@@ -53,7 +53,7 @@ tRex.roar = function() {
   return 'RAWERSRARARWERSARARARRRR!';
 }
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tRex.roar();
+console.log(tRex.roar());
 
 
 // ==== Arrays ====
@@ -75,7 +75,13 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+
+
+graduates.forEach(function(graduate) {
+    universities.push(graduate.university);
+})
+console.log(universities);
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
