@@ -49,9 +49,11 @@ console.log(steg.length);
 // What time period did tyrannosaurus live in?
 console.log(tRex.period);
 
-
+tRex.roar = function() {
+  return 'RAWERSRARARWERSARARARRRR!';
+}
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(tRex.roar();
 
 
 // ==== Arrays ====
