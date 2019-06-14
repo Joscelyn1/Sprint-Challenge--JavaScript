@@ -24,7 +24,14 @@ class CuboidMaker {
     }
 }
 
-const cuboid = new CuboidMaker({
+class CubeMaker extends CuboidMaker {
+    constructor(cubeProperties) {
+        super(cubeProperties);
+    }
+
+}
+
+const cuboid = new CubeMaker({
   length: 4,
   width: 5,
   height: 5
@@ -32,3 +39,6 @@ const cuboid = new CuboidMaker({
 
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
+
+// The stretch problem was a little confusing. The formulas for volume and surface area are the same for cubes and cuboids.
+// So I just inherited the formulas I already made.

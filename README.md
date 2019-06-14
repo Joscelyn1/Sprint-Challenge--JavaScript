@@ -29,14 +29,77 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-
+    `.forEach` applies a given function to each item in a given array but doesn't return anything.
+    `.map` returns a new array with the results of applying a given function on a given array
 2. What is the difference between a function and a method?
+    Methods are functions that were defined as a property of an object.
+    in the below example "greet" is a method.
+
+    const joscelyn = {
+        name: 'Joscelyn',
+        age: 29,
+        greet: function() {
+            return 'Hello there!'
+        }
+    }
 
 3. What is closure?
 
+    Closure refers to how inner functions preserve the values provided in their outer functions.
+
+    Take the below example:
+
+       `function minusMaker(minusNumber) {
+
+  
+             function minus(firstNumber) {
+
+                return firstNumber - minusNumber;
+
+            }
+
+        return minus;`
+
+        }
+
+        const minus5 = minusMaker(5);
+
+        console.log(minus5(7));
+        console.log(minus5(59));
+
+    Minus5 preserves the minusNumber value in minusMaker every time it's called. That value was preserved.
+    In ELI5 terms, minus5 got a backpack that included the values in minusMaker. If I ask minus5 to do something with a
+    value in minusMaker, all it has to do is reach into its backpack to grab it.
+
+
+
+
 4. Describe the four rules of the 'this' keyword.
 
+    i. global binding:
+        if you call "this" in the global scope
+        you'll get the "global object" or
+        "window object." This object has a lot of the
+        information and variables that make up
+        JavaScript.
+
+    ii. implicit binding:
+        if you don't explicitly tell the computer
+        to use a different "this", then implicitly
+        "this" will bind to the object it's in.
+
+    iii. new binding:
+        in a constructor function, you can use 'this'
+        to refer to the object you create with that
+        constructor function using 'new'
+    
+    iv. explicit binding:
+        you can set the value of 'this' with some
+        JS methods including: .bind, .call, .apply
+
 5. Why do we need super() in an extended class?
+
+    So that it will inherit the properties given to its parent class.
 
 ## Project Set up
 
