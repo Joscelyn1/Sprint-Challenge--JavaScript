@@ -90,6 +90,10 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+
+graduates.forEach(function(graduate) {
+  contactInfo.push(graduate.first_name + ' ' + graduate.email);
+})
 console.log(contactInfo);
 
 
